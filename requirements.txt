@@ -1,0 +1,7 @@
+selenium
+undetected-chromedriver
+selenium-stealth
+pandas
+python-dotenv
+webdriver-manager
+setuptools

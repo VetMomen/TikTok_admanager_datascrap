@@ -1,0 +1,30 @@
+# Virtual environments
+venv/
+.venv/
+env/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Environment variables (Sensitive!)
+.env
+
+# Logs and Data
+logs/*.log
+data/*.csv
+logs/timeout_*.png
+
+# Testing and Coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Chrome Profile (Too large and potentially contains sensitive data)
+chrome_profile/
+
+# OS files
+.DS_Store
+Thumbs.db
