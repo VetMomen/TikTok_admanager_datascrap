@@ -7,7 +7,7 @@
 ## 🚀 الخطوة 1: إعداد البيئة والبيانات
 يجب ضبط الإعدادات الأساسية في ملف `.env` ليعمل السكربت بشكل صحيح.
 
-1. افتح ملف [.env](file:///home/mint/Share%20Point/Programming_Projects/Automation_first_steps/.env).
+1. افتح ملف [.env](file:///home/mint/Share%20Point/Programming_Projects/TikTok_Ads_Automation/.env).
 2. قم بتعبئة البيانات التالية:
    - **SMTP_USER**: بريدك الإلكتروني (الذي سيرسل التقارير).
    - **SMTP_PASS**: كلمة مرور التطبيقات (App Password) - *إذا كنت تستخدم Gmail، يجب إنشاء App Password من إعدادات حساب جوجل*.
@@ -48,7 +48,7 @@
 1. اكتب في الطرفية: `crontab -e`.
 2. في نهاية الملف، أضف السطر التالي (تأكد من تعديل المسارات إذا لزم الأمر):
    ```bash
-   0 */12 * * * cd "/home/mint/Share Point/Programming_Projects/Automation_first_steps" && ./venv/bin/python run_tiktok_scraper.py >> logs/cron.log 2>&1
+   0 */12 * * * cd "/home/mint/Share Point/Programming_Projects/TikTok_Ads_Automation" && ./venv/bin/python run_tiktok_scraper.py >> logs/cron.log 2>&1
    ```
 3. احفظ واخرج. الآن سيعمل السكربت كل 12 ساعة تلقائيًا.
 
@@ -84,16 +84,16 @@ crontab -e
 
 ```cron
 # تقرير يومي الساعة 9 صباحاً (لنتائج أمس)
-0 9 * * * /home/mint/Share\ Point/Programming_Projects/Automation_first_steps/venv/bin/python /home/mint/Share\ Point/Programming_Projects/Automation_first_steps/run_tiktok_scraper.py --type daily
+0 9 * * * /home/mint/Share\ Point/Programming_Projects/TikTok_Ads_Automation/venv/bin/python /home/mint/Share\ Point/Programming_Projects/TikTok_Ads_Automation/run_tiktok_scraper.py --type daily
 
 # تقرير كل 3 أيام الساعة 9:05 صباحاً
-5 9 */3 * * /home/mint/Share\ Point/Programming_Projects/Automation_first_steps/venv/bin/python /home/mint/Share\ Point/Programming_Projects/Automation_first_steps/run_tiktok_scraper.py --type 3days
+5 9 */3 * * /home/mint/Share\ Point/Programming_Projects/TikTok_Ads_Automation/venv/bin/python /home/mint/Share\ Point/Programming_Projects/TikTok_Ads_Automation/run_tiktok_scraper.py --type 3days
 
 # تقرير أسبوعي كل يوم اثنين الساعة 9:10 صباحاً
-10 9 * * 1 /home/mint/Share\ Point/Programming_Projects/Automation_first_steps/venv/bin/python /home/mint/Share\ Point/Programming_Projects/Automation_first_steps/run_tiktok_scraper.py --type weekly
+10 9 * * 1 /home/mint/Share\ Point/Programming_Projects/TikTok_Ads_Automation/venv/bin/python /home/mint/Share\ Point/Programming_Projects/TikTok_Ads_Automation/run_tiktok_scraper.py --type weekly
 
 # تقرير شهري يوم 1 من كل شهر الساعة 9:15 صباحاً
-15 9 1 * * /home/mint/Share\ Point/Programming_Projects/Automation_first_steps/venv/bin/python /home/mint/Share\ Point/Programming_Projects/Automation_first_steps/run_tiktok_scraper.py --type monthly
+15 9 1 * * /home/mint/Share\ Point/Programming_Projects/TikTok_Ads_Automation/venv/bin/python /home/mint/Share\ Point/Programming_Projects/TikTok_Ads_Automation/run_tiktok_scraper.py --type monthly
 ```
 
 ---
