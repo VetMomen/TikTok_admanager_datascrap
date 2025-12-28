@@ -1,0 +1,10 @@
+venv/
+.env
+__pycache__/
+log/
+data/
+chrome_profile/
+*.log
+*.xlsx
+*.csv
+.DS_Store
